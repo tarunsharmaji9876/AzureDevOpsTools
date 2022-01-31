@@ -27,7 +27,7 @@ jobs:
       - name: running powershell
         shell: pwsh
         run: |
-          filePath: '$(Agent.BuildDirectory)/s/scripts/CreateWorkItem.ps1'
+          PowerShell ./CreateWorkItem.ps1
       
 
       # Runs a single command using the runners shell
