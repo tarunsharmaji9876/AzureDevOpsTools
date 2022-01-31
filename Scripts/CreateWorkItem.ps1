@@ -1,8 +1,8 @@
 ﻿#Authentication in Azure DevOps
-$AzureDevOpsPAT = 'YOUR_PERSONAL_ACCESS_TOKEN'
+$AzureDevOpsPAT = 'mjky42gwwnth5rtbqgjxnzhxlb7krvqvhfageo52ejquk3ktjedq'
 $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
 
-$OrganizationName = "YOUR_AZURE_DEVOPS_ORGANIZATION_NAME"
+$OrganizationName = "ChirumamillaA"
 $UriOrganization = "https://dev.azure.com/$($OrganizationName)/"
 
 #Lists all projects in your organization
@@ -14,7 +14,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 $WorkItemType = "task"
 $WorkItemTitle = "Test from Powershell"
-$ProjectName = "YOUR_PROJECT_NAME";
+$ProjectName = "apicall";
 
 
 $uri = $UriOrganization + $ProjectName + "/_apis/wit/workitems/$" + $WorkItemType + "?api-version=5.1"
