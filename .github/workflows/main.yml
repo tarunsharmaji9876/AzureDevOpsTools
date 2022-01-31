@@ -27,7 +27,7 @@ jobs:
       - name: running powershell
         shell: pwsh
         run: |
-          filePath: '$AzureDevOpsTools/scripts/CreateWorkItem.ps1'
+          filePath: 'AzureDevOpsTools/scripts/CreateWorkItem.ps1'
            
       
 
