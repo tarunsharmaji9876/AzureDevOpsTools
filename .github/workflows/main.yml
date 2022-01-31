@@ -24,6 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: running powershell
+        shell: pwsh
+        run: |
+          filePath: '$(Agent.BuildDirectory)/s/scripts/CreateWorkItem.ps1'
+      
 
       # Runs a single command using the runners shell
       - id: generatePassword
