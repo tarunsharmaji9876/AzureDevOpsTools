@@ -14,7 +14,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 $WorkItemType = "feature"
 $WorkItemTitle = "Test from Powershell"
-$ProjectName = "POC1";
+$ProjectName = "apicall";
 
 
 $uri = $UriOrganization + $ProjectName + "/_apis/wit/workitems/$" + $WorkItemType + "?api-version=5.1"
