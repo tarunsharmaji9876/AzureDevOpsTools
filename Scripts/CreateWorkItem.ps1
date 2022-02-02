@@ -42,7 +42,7 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
-    `"value`": `"apicall`"
+    `"value`": `"ChirumamillaA\\apicall`"
   }
 ]"
 
