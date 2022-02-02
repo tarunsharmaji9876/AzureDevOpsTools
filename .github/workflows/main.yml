@@ -32,8 +32,8 @@ jobs:
       
 
       # Runs a single command using the runners shell
-      - id: generatePassword
-        uses: demiliani/PasswordGeneratorAction@v1.0
-      - name: show password
-        run: echo "${{ steps.generatePassword.outputs.password }}"
-        shell: bash
+#       - id: generatePassword
+#         uses: demiliani/PasswordGeneratorAction@v1.0
+#       - name: show password
+#         run: echo "${{ steps.generatePassword.outputs.password }}"
+#         shell: bash
