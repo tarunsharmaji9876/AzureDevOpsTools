@@ -29,7 +29,7 @@ $body="[
   {
     `“op`”: `“add`”,
     `“path`”: `“/fields/System.AssignedTo`”,
-    `“from`”: null,
+    #`“from`”: null,
     `“value`”: `“chirumamilla.a@ad.infosys.com`”
   }
 ]"
