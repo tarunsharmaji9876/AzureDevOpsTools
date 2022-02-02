@@ -44,12 +44,12 @@ $body="[
     `"from`": null,
     `"value`": `"Test Comment`"
   },
-  {
-    `"op`": `"add`",
-    `"path`": `"/fields/System.AreaPath`",
-    `"from`": null,
-    `"value`": `"data-development\\Big Data Team`"
-  }
+#   {
+#     `"op`": `"add`",
+#     `"path`": `"/fields/System.AreaPath`",
+#     `"from`": null,
+#     `"value`": `"data-development\\Big Data Team`"
+#   }
 ]"
 
 Invoke-RestMethod -Uri $uri -Method POST -Headers $AzureDevOpsAuthenicationHeader -ContentType "application/json-patch+json" -Body $body
