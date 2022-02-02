@@ -14,6 +14,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 $WorkItemType = "bug"
 $WorkItemTitle = "Test from Powershell"
+$WorkItemDescription = "Test Description"
 $ProjectName = "apicall";
 
 
@@ -31,6 +32,12 @@ $body="[
     `"path`": `"/fields/System.AssignedTo`",
     `"from`": null,
     `"value`": `"chirumamilla.a@ad.infosys.com`"
+  },
+  {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.Description`",
+    `"from`": null,
+    `"value`": `"$($WorkItemDescription)`"
   }
 ]"
 
