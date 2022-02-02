@@ -14,6 +14,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 $WorkItemType = "feature"
 $WorkItemTitle = "Test from Powershell"
+$WorkItemDescription = "Test description"
 $ProjectName = "apicall";
 
 
@@ -21,11 +22,41 @@ $uri = $UriOrganization + $ProjectName + "/_apis/wit/workitems/$" + $WorkItemTyp
 echo $uri
 
 $body="[
+ # {
+ #   `"op`": `"add`",
+ #   `"path`": `"/fields/System.Title`",
+ #   `"value`": `"$($WorkItemTitle)`"
+ # }
   {
-    `"op`": `"add`",
-    `"path`": `"/fields/System.Title`",
-    `"value`": `"$($WorkItemTitle)`"
-  }
+ “op”: “add”,
+ “path”: “/fields/System.Title”,
+ “from”: null,
+ “value”: “$($WorkItemTitle)”
+ },
+ {
+ “op”: “add”,
+ “path”: “/fields/System.Description”,
+ “from”: null,
+ “value”: “$($WorkItemDescription)”
+ },
+ {
+ “op”: “add”,
+ “path”: “/fields/System.History”,
+ “from”: null,
+ “value”: “Test Comment”
+ },
+ {
+ “op”: “add”,
+ “path”: “/fields/System.AssignedTo”,
+ “from”: null,
+ “value”: “chirumamilla.a@ad.infosys.com”
+ },
+ {
+ “op”: “add”,
+ “path”: “/fields/System.AreaPath”,
+ “from”: null,
+ “value”: “data-development\\Big Data Team”
+ }
 ]"
 
 Invoke-RestMethod -Uri $uri -Method POST -Headers $AzureDevOpsAuthenicationHeader -ContentType "application/json-patch+json" -Body $body
