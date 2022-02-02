@@ -31,6 +31,24 @@ $body="[
     `"path`": `"/fields/System.AssignedTo`",
     `"from`": null,
     `"value`": `"chirumamilla.a@ad.infosys.com`"
+  },
+  {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.Description`",
+    `"from`": null,
+    `"value`": `"$($WorkItemDescription)`"
+  },
+  {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.History`",
+    `"from`": null,
+    `"value`": `"Test Comment`"
+  },
+  {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.AreaPath`",
+    `"from`": null,
+    `"value`": `"data-development\\Big Data Team`"
   }
 ]"
 
