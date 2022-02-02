@@ -39,6 +39,12 @@ $body="[
     `"from`": null,
     `"value`": `"$($WorkItemDescription)`"
   },
+  #  {
+#     `"op`": `"add`",
+#     `"path`": `"/fields/System.History`",
+#     `"from`": null,
+#     `"value`": `"Test Comment`"
+#  },
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
