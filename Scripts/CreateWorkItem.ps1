@@ -39,6 +39,12 @@ $body="[
     `"from`": null,
     `"value`": `"$($WorkItemDescription)`"
   }
+  {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.AreaPath`",
+    `"from`": null,
+    `"value`": `"For OSS test`"
+  }
 ]"
 
 Invoke-RestMethod -Uri $uri -Method POST -Headers $AzureDevOpsAuthenicationHeader -ContentType "application/json-patch+json" -Body $body
