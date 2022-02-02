@@ -36,7 +36,7 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.Description`",
-    `"from`": null,
+    #`"from`": null,
     `"value`": `"$($WorkItemDescription)`"
   }
 #   {
