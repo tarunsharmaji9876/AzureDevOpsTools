@@ -42,7 +42,7 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
-    `"value`": `"For OSS test`"
+    `"value`": `"ForOSStest`"
   }
 ]"
 
