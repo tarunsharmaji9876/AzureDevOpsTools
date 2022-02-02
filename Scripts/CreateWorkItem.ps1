@@ -1,4 +1,4 @@
-﻿#Authentication in Azure DevOps
+#Authentication in Azure DevOps
 $AzureDevOpsPAT = 'mjky42gwwnth5rtbqgjxnzhxlb7krvqvhfageo52ejquk3ktjedq'
 $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
 
@@ -14,7 +14,6 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 $WorkItemType = "feature"
 $WorkItemTitle = "Test from Powershell"
-$WorkItemDescription = "Test description"
 $ProjectName = "apicall";
 
 
