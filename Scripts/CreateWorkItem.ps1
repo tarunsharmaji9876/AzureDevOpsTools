@@ -44,6 +44,11 @@ $body="[
     `"path`": `"/fields/System.AreaPath`",
     `"value`": `"API`"
   }
+   {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.State`",
+    `"value`": `"Doing`"
+  }
 ]"
 
 Invoke-RestMethod -Uri $uri -Method POST -Headers $AzureDevOpsAuthenicationHeader -ContentType "application/json-patch+json" -Body $body
