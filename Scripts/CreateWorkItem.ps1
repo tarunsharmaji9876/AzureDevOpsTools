@@ -2,7 +2,7 @@
 $AzureDevOpsPAT = 'cwcujbvivlkxjaetuzxkyhimbufbmhua6to24aqwoowr2rvcl6pa'
 $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
 
-$OrganizationName = "tarunsharmaji9876"
+$OrganizationName = "mrsharma2607"
 $UriOrganization = "https://dev.azure.com/$($OrganizationName)/"
 
 #Lists all projects in your organization
