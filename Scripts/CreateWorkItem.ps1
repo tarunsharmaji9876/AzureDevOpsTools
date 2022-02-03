@@ -15,6 +15,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 $WorkItemType = "epic"
 $WorkItemTitle = "Test from Powershell"
 $WorkItemDescription = "Test Description"
+$WorkItemState = "Doing"
 $ProjectName = "API";
 
 
@@ -47,7 +48,8 @@ $body="[
    {
     `"op`": `"add`",
     `"path`": `"/fields/System.State`",
-    `"value`": `"Doing`"
+    `"from`": null,
+    `"value`": `"$($WorkItemState)`"
   }
 ]"
 
