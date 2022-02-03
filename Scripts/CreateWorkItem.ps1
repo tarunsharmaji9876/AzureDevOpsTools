@@ -1,8 +1,8 @@
 #Authentication in Azure DevOps
-$AzureDevOpsPAT = 'mjky42gwwnth5rtbqgjxnzhxlb7krvqvhfageo52ejquk3ktjedq'
+$AzureDevOpsPAT = 'wzozougp5ocug52afc37qusapkqbtftuyuf7ld6osipuqhtqrv3q'
 $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
 
-$OrganizationName = "ChirumamillaA"
+$OrganizationName = "tarunsharmaji9876"
 $UriOrganization = "https://dev.azure.com/$($OrganizationName)/"
 
 #Lists all projects in your organization
@@ -12,10 +12,10 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 #Create a work item
 
-$WorkItemType = "epic"
+$WorkItemType = "task"
 $WorkItemTitle = "Test from Powershell"
 $WorkItemDescription = "Test Description"
-$ProjectName = "apicall";
+$ProjectName = "API";
 
 
 $uri = $UriOrganization + $ProjectName + "/_apis/wit/workitems/$" + $WorkItemType + "?api-version=5.1"
@@ -31,7 +31,7 @@ $body="[
     `"op`": `"add`",
     `"path`": `"/fields/System.AssignedTo`",
     `"from`": null,
-    `"value`": `"chirumamilla.a@ad.infosys.com`"
+    `"value`": `"tarunsharmaji9876@gmail.com`"
   },
   {
     `"op`": `"add`",
@@ -42,7 +42,7 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
-    `"value`": `"apicall`"
+    `"value`": `"API`"
   }
 ]"
 
