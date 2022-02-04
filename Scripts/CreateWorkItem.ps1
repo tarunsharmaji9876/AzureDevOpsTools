@@ -44,7 +44,7 @@ $body="[
     `"op`": `"add`",
     `"path`": `"/fields/System.Activity`",
     `"from`": null,
-    `"value`": `"Documentation`"
+    `"value`": `"$($WorkItemActivity)`"
   },
   {
     `"op`": `"add`",
