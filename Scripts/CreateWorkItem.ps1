@@ -12,9 +12,9 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 #Create a work item
 
-$WorkItemType = "Task"
+$WorkItemType = "Epic"
 $WorkItemTitle = "Test from Powershell"
-$WorkItemDescription = "Task creation"
+$WorkItemDescription = "Epic creation"
 $ProjectName = "API";
 
 
@@ -44,11 +44,7 @@ $body="[
     `"path`": `"/fields/System.AreaPath`",
     `"value`": `"API`"
   },
-  {
-    `"op`": `"add`",
-    `"path`": `"/fields/System.States`",
-    `"value`": `"Doing`"
-  } 
+  
 ]"
 
 Invoke-RestMethod -Uri $uri -Method POST -Headers $AzureDevOpsAuthenicationHeader -ContentType "application/json-patch+json" -Body $body
