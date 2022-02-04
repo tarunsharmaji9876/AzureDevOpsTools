@@ -47,7 +47,6 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.States`",
-    `"from`": To Do,
     `"value`": `"Doing`"
   } 
 ]"
