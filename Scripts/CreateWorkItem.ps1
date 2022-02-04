@@ -12,10 +12,10 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 #Create a work item
 
-$WorkItemType = "Issue"
+$WorkItemType = "Task"
 $WorkItemTitle = "Test from Powershell"
 $WorkItemDescription = "Issue in passing the parameter"
-$ProjectName = "API";
+$ProjectName = "test_code";
 
 
 $uri = $UriOrganization + $ProjectName + "/_apis/wit/workitems/$" + $WorkItemType + "?api-version=5.1"
