@@ -15,7 +15,6 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 $WorkItemType = "epic"
 $WorkItemTitle = "Test from Powershell"
 $WorkItemDescription = "Test Description"
-$WorkItemState = "State"
 $ProjectName = "API";
 
 
@@ -45,12 +44,7 @@ $body="[
     `"path`": `"/fields/System.AreaPath`",
     `"value`": `"API`"
   }
-   {
-    `"op`": `"add`",
-    `"path`": `"/fields/System.State`",
-    `"from`": To Do,
-    `"value`": `"Doing`"
-  }
+  
 ]"
 
 Invoke-RestMethod -Uri $uri -Method POST -Headers $AzureDevOpsAuthenicationHeader -ContentType "application/json-patch+json" -Body $body
