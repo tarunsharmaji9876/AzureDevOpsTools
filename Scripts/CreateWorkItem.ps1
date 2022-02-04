@@ -15,6 +15,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 $WorkItemType = "Task"
 $WorkItemTitle = "Test from Powershell"
 $WorkItemDescription = "Task creation"
+$WorkItemDiscussion = "Test it and report in the end of the day"
 $ProjectName = "test_code";
 
 
@@ -36,6 +37,12 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.Description`",
+    `"from`": null,
+    `"value`": `"$($WorkItemDescription)`"
+  },
+  {
+    `"op`": `"add`",
+    `"path`": `"/fields/System.Discussion`",
     `"from`": null,
     `"value`": `"$($WorkItemDescription)`"
   },
