@@ -1,5 +1,5 @@
 #Authentication in Azure DevOps
-$AzureDevOpsPAT = 'cwcujbvivlkxjaetuzxkyhimbufbmhua6to24aqwoowr2rvcl6pa'
+$AzureDevOpsPAT = 't2h5a3sdajeh6ma3v6ey4x4nnln2gcxkxvmugkdpjvbxfkt5arza'
 $AzureDevOpsAuthenicationHeader = @{Authorization = 'Basic ' + [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(":$($AzureDevOpsPAT)")) }
 
 $OrganizationName = "mrsharma2607"
@@ -14,7 +14,7 @@ Invoke-RestMethod -Uri $uriAccount -Method get -Headers $AzureDevOpsAuthenicatio
 
 $WorkItemType = "Task"
 $WorkItemTitle = "Test from Powershell"
-$WorkItemDescription = "Issue in passing the parameter"
+$WorkItemDescription = "Task creation"
 $ProjectName = "test_code";
 
 
@@ -42,7 +42,7 @@ $body="[
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
-    `"value`": `"API`"
+    `"value`": `"test_code`"
   },
   
 ]"
