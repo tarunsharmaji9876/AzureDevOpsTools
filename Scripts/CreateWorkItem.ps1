@@ -44,9 +44,9 @@ $body="[
     `"path`": `"/fields/System.AreaPath`",
     `"value`": `"API`"
   },
- {
+  {
     `"op`": `"add`",
-    `"path`": `"/fields/System.State`",
+    `"path`": `"/fields/System.States`",
     `"from`": To Do,
     `"value`": `"Doing`"
   } 
