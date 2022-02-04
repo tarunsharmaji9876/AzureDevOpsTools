@@ -42,12 +42,6 @@ $body="[
   },
   {
     `"op`": `"add`",
-    `"path`": `"/fields/System.Activity`",
-    `"from`": null,
-    `"value`": `"$($WorkItemActivity)`"
-  },
-  {
-    `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
     `"value`": `"test_code`"
   }
