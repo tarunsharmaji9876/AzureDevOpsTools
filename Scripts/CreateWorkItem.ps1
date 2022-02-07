@@ -41,7 +41,7 @@ $body="[
   },
     {
     `"op`": `"add`",
-    `"path`": `"/fields/System.Discussion`",
+    `"path`": `"/fields/System.Remaining Work`",
     `"from`": null,
     `"value`": `"Remaining work of Task"
   },
