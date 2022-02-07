@@ -39,12 +39,6 @@ $body="[
     `"from`": null,
     `"value`": `"$($WorkItemDescription)`"
   },
-    {
-    `"op`": `"add`",
-    `"path`": `"/fields/System.Remaining Work`",
-    `"from`": null,
-    `"value`": `"$($WorkItemRemainingWork)`"
-  },
   {
     `"op`": `"add`",
     `"path`": `"/fields/System.AreaPath`",
